@@ -6,8 +6,8 @@ class CreateBookings < ActiveRecord::Migration[6.1]
       t.integer :id_users
       t.date :end_date
       t.decimal :cost
-      t.instruments :references
-      t.users :references
+      t.references :instruments
+      t.references :users
 
       t.timestamps
     end
