@@ -4,4 +4,32 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "creating users"
+User.create!(
+  email: 'test@email.com',
+  password: 'passone',
+  name: 'Test Person',
+  location: 'London')
+
+User.create!(
+  email: 'rest@email.com',
+  password: 'passtwo',
+  name: 'Rest Person',
+  location: 'Edinburgh'
+  )
+
+puts "adding instruments"
+
+20.times do
+  # instrument_type =
+  Instrument.create!(
+    instrument_type: ['guitar', 'piano', 'cello', 'violin', 'trombone', 'saxophone', 'flute', 'harp', 'drums'].sample,
+    delivery_option: ['courier', 'collection'].sample,
+    daily_rate: [85.00, 100.00, 50.00, 150.00, 200.00].sample,
+    user_id: User.all.sample.id
+    )
+end
+
+puts "done"
