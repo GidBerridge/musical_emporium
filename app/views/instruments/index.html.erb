@@ -1,1 +1,7 @@
-<h1>show list of guitars etc</h1>
+<!-- <h1>show list of guitars etc</h1> -->
+<h2><%= @instrument %></h2>
+    <p class="instrument_type"><% @instruments.each do |instrument| %>
+      <div class="list-item"><%= link_to instrument, instrument_path(instrument) %></div>
+      <% end %>
+      <%= link_to 'Add a new list', new_instrument_path %>
+    </p>
