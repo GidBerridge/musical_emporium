@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 2021_07_31_153804) do
 
   create_table "bookings", force: :cascade do |t|
     t.date "start_date"
+    t.integer "id_instruments"
+    t.integer "id_users"
     t.date "end_date"
     t.float "cost"
     t.datetime "created_at", precision: 6, null: false
