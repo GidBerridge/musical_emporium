@@ -1,8 +1,8 @@
 class InstrumentsController < ApplicationController
 
   def index
+    @instruments = Instrument.all
     # @instrument = Instrument.find(params[:instrument_type])
-    @instrument = Instrument.all
   end
 
   def show
