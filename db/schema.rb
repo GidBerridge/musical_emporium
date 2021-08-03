@@ -33,6 +33,9 @@ ActiveRecord::Schema.define(version: 2021_07_31_153804) do
     t.float "daily_rate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "make"
+    t.string "model_name"
+    t.string "image_url"
     t.bigint "user_id"
     t.index ["user_id"], name: "index_instruments_on_user_id"
   end
