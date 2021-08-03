@@ -1,13 +1,16 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  has_many :instruments, :bookings, :reviews
 
-  validates :location, :name, presence: true
-  validates :name, :email, :encrypted_password, :reset_password_token,
-            :reset_password_sent_at, :remember_created_at, uniqueness: true
+  has_many :instruments
+  has_many :bookings
+  has_many :reviews
+  # dependent: :destroy
+  has_many :bookings_as_owner, through: :instruments, source: :bookings
+
+  validates :name, presence: true, uniqueness: true
+  validates :location, presence: true
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
 end

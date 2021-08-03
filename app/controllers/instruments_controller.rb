@@ -3,6 +3,14 @@ class InstrumentsController < ApplicationController
   def index
     @instruments = Instrument.all
     # @instrument = Instrument.find(params[:instrument_type])
+<<<<<<< HEAD
+=======
+    if params[:query].present?
+      @instruments = Instrument.where(instrument_type: params[:query])
+    else
+      @instruments = Instrument.all
+    end
+>>>>>>> 00842850f311f3ececc6e26306c6b456ecd8cd0e
   end
 
   def show
@@ -34,9 +42,13 @@ class InstrumentsController < ApplicationController
     redirect_to instruments_path
   end
 
+  # def search
+  #   @search = Instrument.find(params[:instrument_type])
+  # end
+
   private
 
-  def list_params
+  def instrument_params
     params.require(:instrument).permit(:instrument_type)
   end
 

@@ -1,4 +1,5 @@
 <!-- <h1>show list of guitars etc</h1> -->
+<<<<<<< HEAD
 
 <h2><%= @instruments.first.instrument_type %></h2>
 
@@ -8,4 +9,19 @@
       <div class="list-item"><%= link_to "#{instrument_name}", instrument_path(instrument) %></div>
       <% end %>
 
+=======
+<h2> Instruments </h2>
+    <p class="instrument_type"><% @instruments.each do |instrument| %>
+      <div class="list-item">
+        <h4><%= link_to instrument.instrument_type, instrument_path(instrument) %></h4>
+        <p><%= instrument.instrument_name %></p>
+        <p><%= instrument.delivery_option %></p>
+        <p><%= instrument.daily_rate %></p>
+      </div>
+      <% end %>
+      <%= link_to 'Add a new list', new_instrument_path, class: "btn btn-primary" %>
+      <%= link_to 'Search again', root_path, class: "btn btn-primary" %>
+>>>>>>> 00842850f311f3ececc6e26306c6b456ecd8cd0e
     </p>
+
+
