@@ -39,4 +39,48 @@ puts "adding instruments"
     )
 end
 
+Instrument.create!(
+  instrument_type: "Guitar",
+  make: "Fender",
+  instrument_name: "Stratocaster",
+  image_url: "../assets/images/guitars/guitar_3_fender_stratocaster.jpeg",
+  delivery_option: "Collect",
+  daily_rate: 100.00
+  )
+
+Instrument.create!(
+  instrument_type: "Guitar",
+  make: "gibson",
+  instrument_name: "Les Paul",
+  image_url: "../assets/images/guitars/guitar_5_gibson_les_paul.jpeg",
+  delivery_option: "Courier",
+  daily_rate: 110.00
+  )
+
+Instrument.create!(
+  instrument_type: "Guitar",
+  make: "Fender",
+  instrument_name: "Telecaster",
+  image_url: "../assets/images/guitars/guitar_4_fender_telecaster.jpeg",
+  delivery_option: "Courier",
+  daily_rate: 85.00
+  )
+
+Instrument.create!(
+  instrument_type: "Piano",
+  make: "Yamaha",
+  instrument_name: "Baby piano",
+  image_url: "../assets/images/pianos/piano_1_yamaha_baby_piano.jpeg",
+  delivery_option: "Collect",
+  daily_rate: 240.00
+  )
+
+Instrument.create!(
+  instrument_type: "Piano",
+  make: "Kurzweil",
+  instrument_name: "Cup 2",
+  image_url: "../assets/images/pianos/piano_3_kurzweil_cup2.jpeg",
+  delivery_option: "Collect",
+  daily_rate: 210.00
+  )
 puts "done"
