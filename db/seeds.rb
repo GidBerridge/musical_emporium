@@ -15,29 +15,25 @@ Instrument.destroy_all
 User.destroy_all
 
 User.create!(
-  email: 'test@email.com',
-  password: 'passone',
   name: 'Test Person',
   location: 'London')
 
-User.create!(
-  email: 'rest@email.com',
-  password: 'passtwo',
+User.create(
   name: 'Rest Person',
   location: 'Edinburgh'
   )
 
 puts "adding instruments"
 
-20.times do
-  # instrument_type =
-  Instrument.create!(
-    instrument_type: ['guitar', 'piano', 'cello', 'violin', 'trombone', 'saxophone', 'flute', 'harp', 'drums'].sample,
-    delivery_option: ['courier', 'collection'].sample,
-    daily_rate: [85.00, 100.00, 50.00, 150.00, 200.00].sample,
-    user_id: User.all.sample.id
-    )
-end
+# 20.times do
+#   # instrument_type =
+#   Instrument.create!(
+#     instrument_type: ['guitar', 'piano', 'cello', 'violin', 'trombone', 'saxophone', 'flute', 'harp', 'drums'].sample,
+#     delivery_option: ['courier', 'collection'].sample,
+#     daily_rate: [85.00, 100.00, 50.00, 150.00, 200.00].sample,
+#     user_id: User.all.sample.id
+#     )
+# end
 
 Instrument.create!(
   instrument_type: "Guitar",
@@ -84,3 +80,4 @@ Instrument.create!(
   daily_rate: 210.00
   )
 puts "done"
+
