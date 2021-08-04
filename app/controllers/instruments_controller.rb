@@ -3,14 +3,12 @@ class InstrumentsController < ApplicationController
   def index
     @instruments = Instrument.all
     # @instrument = Instrument.find(params[:instrument_type])
-<<<<<<< HEAD
-=======
-    if params[:query].present?
-      @instruments = Instrument.where(instrument_type: params[:query])
-    else
-      @instruments = Instrument.all
-    end
->>>>>>> 00842850f311f3ececc6e26306c6b456ecd8cd0e
+
+    # if params[:query].present?
+    #   @instruments = Instrument.where(instrument_type: params[:query])
+    # else
+    #   @instruments = Instrument.all
+    # end
   end
 
   def show
