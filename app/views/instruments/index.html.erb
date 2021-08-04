@@ -6,8 +6,6 @@
         <h4><%= link_to instrument.make, instrument_path(instrument) %></h4>
         <p><%= instrument.instrument_name %></p>
         <%= image_tag(instrument.image_url) %>
-        <p>Delivery option : <%= instrument.delivery_option %></p>
-        <p>Daily hire rate £<%= instrument.daily_rate %></p>
       </div>
       <% end %>
       <%= link_to 'Add a new instrument', new_instrument_path, class: "btn btn-primary" %>

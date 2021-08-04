@@ -47,7 +47,7 @@ class InstrumentsController < ApplicationController
   private
 
   def instrument_params
-    params.require(:instrument).permit(:instrument_type)
+    params.require(:instrument).permit(:make, :delivery_option, :daily_rate, :instrument_name, :image_url)
   end
 
 end

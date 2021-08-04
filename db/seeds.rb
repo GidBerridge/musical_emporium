@@ -42,7 +42,7 @@ puts "adding instruments"
 Instrument.create!(
   instrument_type: "Guitar",
   make: "Fender",
-  instrument_name: "Stratocaster",
+  instrument_name: "Stratocaster 1996",
   image_url: "/assets/guitars/guitar_3_fender_stratocaster.jpeg",
   delivery_option: "Collect",
   daily_rate: 100.00,
@@ -52,7 +52,7 @@ Instrument.create!(
 Instrument.create!(
   instrument_type: "Guitar",
   make: "Gibson",
-  instrument_name: "Les Paul",
+  instrument_name: "Les Paul 1971",
   image_url: "/assets/guitars/guitar_5_gibson_les_paul.jpeg",
   delivery_option: "Courier",
   daily_rate: 110.00,
@@ -62,7 +62,7 @@ Instrument.create!(
 Instrument.create!(
   instrument_type: "Guitar",
   make: "Fender",
-  instrument_name: "Telecaster",
+  instrument_name: "Telecaster 1984",
   image_url: "/assets/guitars/guitar_4_fender_telecaster.jpeg",
   delivery_option: "Courier",
   daily_rate: 85.00,

@@ -1,5 +1,7 @@
 <h1>Add an Instrument</h1>
-<%= form_for(@instrument) do |f| %>
+<%= form_for @instrument do |f| %>
+  <%= f.label :instrument_type %>
+  <%= f.text_field :instrument_type %>
   <%= f.label :make %>
   <%= f.text_field :make %>
   <%= f.label :instrument_name %>
