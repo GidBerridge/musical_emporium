@@ -1,16 +1,32 @@
+
 <div class="container">
-  <h1 class="individual_instument"><%= @instrument.make @instrument.model_name %></h1>
-  <ul>
-    <% @instruments.each do |instrument| %>
-    <div class="instrument-container">
-      <div class="instrument-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= instrument.image_url %>)">
-        <% end %>
-      </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1><%= "Take a closer look" %></h1>
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <th scope="row">Instrument</th>
+            <td><%= @instrument.instrument_type %></td>
+          </tr>
+          <tr>
+            <th scope="row"><%= @instrument.make + " " + @instrument.instrument_name%></th>
+            <div class="instrument-image"> <%= image_tag(@instrument.image_url) %>
+            </div>
+          <tr>
+            <th scope="row">Daily Rate</th>
+            <td><%= @instrument.daily_rate %></td>
+          </tr>
+          <tr>
+            <th scope="row">Delivery Options</th>
+            <td><%= @instrument.delivery_option %></td>
+          </tr>
+        </tbody>
+      </table>
+    <%= link_to 'Add a new listing', new_instrument_path, class: "btn btn-primary" %>
+    <%= link_to 'Search again', root_path, class: "btn btn-primary" %>
+    <%= link_to 'Make a booking', new_instrument_booking_path, class: "btn btn-primary" %>
+
     </div>
-    <% end %>
-  </ul>
-
-<%= link_to "Back to #{instruments.instrument_type} index", instruments_path %>
-<%= link_to "Hire instrument", new_instrument_booking_path %>
-
+  </div>
 </div>

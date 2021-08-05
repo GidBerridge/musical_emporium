@@ -1,0 +1,12 @@
+
+<div class=container>
+  <h1>Make a booking></h1>
+    <br>
+    <%= simple_form_for [@instrument, @booking] do |f| %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.submit %>
+    <% end %>
+</div>
+
+#cost - start date - end date / daily rate
