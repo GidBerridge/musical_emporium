@@ -10,6 +10,7 @@
           <% @instruments.each do |instrument| %>
           <div class="card-product">
             <!-- to do image link here -->
+            <p><%= image_tag instrument.image_url %></p>
             <div class="card-body">
               <h4><%= link_to instrument.instrument_type, instrument_path(instrument) %></h4>
               <!-- <p class="card-text"><%= instrument.instrument_name %></p> -->
