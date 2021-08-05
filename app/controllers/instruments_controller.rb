@@ -18,8 +18,9 @@ class InstrumentsController < ApplicationController
 
   def create
     @instrument = Instrument.new(instrument_params)
-    if @instrument.save
-      redirect_to instrument_path(@list)
+    @instrument.user = User.first
+    if @instrument.save!
+      redirect_to instrument_path(@instrument)
     else
       render :new
     end
@@ -44,7 +45,7 @@ class InstrumentsController < ApplicationController
   private
 
   def instrument_params
-    params.require(:instrument).permit(:make, :delivery_option, :daily_rate, :instrument_name, :image_url)
+    params.require(:instrument).permit(:make, :instrument_type, :delivery_option, :daily_rate, :instrument_name, :image_url)
   end
 
 end
