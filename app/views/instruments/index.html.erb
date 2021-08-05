@@ -1,23 +1,30 @@
 <!-- <h1>show list of guitars etc</h1> -->
 
-<h2> Instruments </h2>
-    <p class="instrument_type"><% @instruments.each do |instrument| %>
-      <div class="list-item">
-        <h4><%= link_to instrument.make, instrument_path(instrument) %></h4>
-        <p><%= instrument.instrument_name %></p>
-        <%= image_tag(instrument.image_url) %>
-      </div>
-      <% end %>
-      <%= link_to 'Add a new instrument', new_instrument_path, class: "btn btn-primary" %>
+
+
+    <div class="container" style="width: 200rem; margin-top: 32px;">
+      <h2> Emporium finds for <%= params[:query] %></h2>
+      <div class="d-flex justify-content-around">
+      <!-- <div class="row row-cols-1 row-cols-md-3"> -->
+        <!-- <div class="col"> -->
+          <% @instruments.each do |instrument| %>
+          <div class="card-product">
+            <!-- to do image link here -->
+            <div class="card-body">
+              <h4><%= link_to instrument.instrument_type, instrument_path(instrument) %></h4>
+              <!-- <p class="card-text"><%= instrument.instrument_name %></p> -->
+              <p><%= instrument.delivery_option %></p>
+              <p><%= instrument.daily_rate %></p>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      <!-- </div> -->
+      <!-- <%= link_to 'Add a new list', new_instrument_path, class: "btn btn-primary" %> -->
+
+
       <%= link_to 'Search again', root_path, class: "btn btn-primary" %>
-    </p>
+    </div>
 
 </div>
 
-#make each item into a card
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
