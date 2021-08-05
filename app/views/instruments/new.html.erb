@@ -1,1 +1,19 @@
-<h1>Add an instrument listing</h1>
+
+<h1>Add an Instrument</h1>
+<%= form_for @instrument do |f| %>
+  <%= f.label :instrument_type %>
+  <%= f.text_field :instrument_type %>
+  <%= f.label :make %>
+  <%= f.text_field :make %>
+  <%= f.label :instrument_name %>
+  <%= f.text_field :instrument_name %>
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %>
+  <%= f.label :daily_rate %>
+  <%= f.number_field :daily_rate %>
+  <%= f.label :delivery_option %>
+  <%= f.text_field :delivery_option %>
+
+  <%= f.submit %>
+<% end %>
+<%= link_to 'Back to list', instruments_path %>

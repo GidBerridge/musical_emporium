@@ -10,6 +10,10 @@
             <td><%= @instrument.instrument_type %></td>
           </tr>
           <tr>
+            <th scope="row"><%= @instrument.make + " " + @instrument.instrument_name%></th>
+            <div class="instrument-image"> <%= image_tag(@instrument.image_url) %>
+            </div>
+          <tr>
             <th scope="row">Daily Rate</th>
             <td><%= @instrument.daily_rate %></td>
           </tr>
@@ -19,10 +23,9 @@
           </tr>
         </tbody>
       </table>
-    <%= link_to 'Add a new list', new_instrument_path, class: "btn btn-primary" %>
+    <%= link_to 'Add a new listing', new_instrument_path, class: "btn btn-primary" %>
     <%= link_to 'Search again', root_path, class: "btn btn-primary" %>
     <%= link_to 'Make a booking', new_instrument_booking_path, class: "btn btn-primary" %>
-
 
     </div>
   </div>

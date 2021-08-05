@@ -1,12 +1,14 @@
 class InstrumentsController < ApplicationController
 
   def index
+    @instruments = Instrument.all
     # @instrument = Instrument.find(params[:instrument_type])
-    if params[:query].present?
-      @instruments = Instrument.where(instrument_type: params[:query])
-    else
-      @instruments = Instrument.all
-    end
+
+    # if params[:query].present?
+    #   @instruments = Instrument.where(instrument_type: params[:query])
+    # else
+    #   @instruments = Instrument.all
+    # end
   end
 
   def show
@@ -45,7 +47,7 @@ class InstrumentsController < ApplicationController
   private
 
   def instrument_params
-    params.require(:instrument).permit(:instrument_type)
+    params.require(:instrument).permit(:make, :delivery_option, :daily_rate, :instrument_name, :image_url)
   end
 
 end

@@ -29,14 +29,64 @@ User.create!(
 
 puts "adding instruments"
 
-20.times do
-  # instrument_type =
-  Instrument.create!(
-    instrument_type: ['guitar', 'piano', 'cello', 'violin', 'trombone', 'saxophone', 'flute', 'harp', 'drums'].sample,
-    delivery_option: ['courier', 'collection'].sample,
-    daily_rate: [85.00, 100.00, 50.00, 150.00, 200.00].sample,
-    user_id: User.all.sample.id
-    )
-end
+# 20.times do
+#   # instrument_type =
+#   Instrument.create!(
+#     instrument_type: ['guitar', 'piano', 'cello', 'violin', 'trombone', 'saxophone', 'flute', 'harp', 'drums'].sample,
+#     delivery_option: ['courier', 'collection'].sample,
+#     daily_rate: [85.00, 100.00, 50.00, 150.00, 200.00].sample,
+#     user_id: User.all.sample.id
+#     )end
+
+
+Instrument.create!(
+  instrument_type: "Guitar",
+  make: "Fender",
+  instrument_name: "Stratocaster 1996",
+  image_url: "/assets/guitars/guitar_3_fender_stratocaster.jpeg",
+  delivery_option: "Collect",
+  daily_rate: 100.00,
+  user_id: User.all.sample.id
+  )
+
+Instrument.create!(
+  instrument_type: "Guitar",
+  make: "Gibson",
+  instrument_name: "Les Paul 1971",
+  image_url: "/assets/guitars/guitar_5_gibson_les_paul.jpeg",
+  delivery_option: "Courier",
+  daily_rate: 110.00,
+  user_id: User.all.sample.id
+  )
+
+Instrument.create!(
+  instrument_type: "Guitar",
+  make: "Fender",
+  instrument_name: "Telecaster 1984",
+  image_url: "/assets/guitars/guitar_4_fender_telecaster.jpeg",
+  delivery_option: "Courier",
+  daily_rate: 85.00,
+  user_id: User.all.sample.id
+  )
+
+Instrument.create!(
+  instrument_type: "Piano",
+  make: "Yamaha",
+  instrument_name: "Baby piano",
+  image_url: "/assets/pianos/piano_1_yamaha_baby_piano.jpeg",
+  delivery_option: "Collect",
+  daily_rate: 240.00,
+  user_id: User.all.sample.id
+  )
+
+Instrument.create!(
+  instrument_type: "Piano",
+  make: "Kurzweil",
+  instrument_name: "Cup 2",
+  image_url: "/assets/pianos/piano_3_kurzweil_cup2.jpeg",
+  delivery_option: "Collect",
+  daily_rate: 210.00,
+  user_id: User.all.sample.id
+  )
 
 puts "done"
