@@ -5,8 +5,6 @@
     <%= simple_form_for [@instrument, @booking] do |f| %>
       <%= f.input :start_date %>
       <%= f.input :end_date %>
-      <%= f.submit %>
+      <%= link_to 'Book Now', class: "btn btn-primary" %>
     <% end %>
 </div>
-
-#cost - start date - end date / daily rate
