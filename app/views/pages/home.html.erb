@@ -1,11 +1,18 @@
-<h1>Musical Emporium</h1>
-<h4>Learn, play, rehearse, perform. Whatever your musical inclination, find your instrument here</h4>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))>
+  <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
+  <div class="container">
+    <h1>Musical Emporium</h1>
+    <p>Learn, play, rehearse, perform. Whatever your musical inclination, find your instrument here</p>
 
- <%= form_tag instruments_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find an instrument"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+     <%= form_tag instruments_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find an instrument"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+
