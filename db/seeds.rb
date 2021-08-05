@@ -89,4 +89,24 @@ Instrument.create!(
   user_id: User.all.sample.id
   )
 
+Instrument.create!(
+  instrument_type: "Trombone",
+  make: "Yamaha",
+  instrument_name: "466",
+  image_url: "/assets/trombones/trombone_3_yamaha_466.jpeg",
+  delivery_option: "Collect",
+  daily_rate: 210.00,
+  user_id: User.all.sample.id
+  )
+
+Instrument.create!(
+  instrument_type: "Saxophone",
+  make: "Jupiter",
+  instrument_name: "Alto",
+  image_url: "/assets/sax/sax_3_jupiter_alto.jpeg",
+  delivery_option: "Courier",
+  daily_rate: 60.00,
+  user_id: User.all.sample.id
+  )
+
 puts "done"
