@@ -1,14 +1,32 @@
-<h1><%= @instrument.make + " " + @instrument.instrument_name%></h1>
 
-  <div class="instrument-container">
-    <div class="instrument-image"> <%= image_tag(@instrument.image_url) %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1><%= "Take a closer look" %></h1>
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <th scope="row">Instrument</th>
+            <td><%= @instrument.instrument_type %></td>
+          </tr>
+          <tr>
+            <th scope="row"><%= @instrument.make + " " + @instrument.instrument_name%></th>
+            <div class="instrument-image"> <%= image_tag(@instrument.image_url) %>
+            </div>
+          <tr>
+            <th scope="row">Daily Rate</th>
+            <td><%= @instrument.daily_rate %></td>
+          </tr>
+          <tr>
+            <th scope="row">Delivery Options</th>
+            <td><%= @instrument.delivery_option %></td>
+          </tr>
+        </tbody>
+      </table>
+    <%= link_to 'Add a new listing', new_instrument_path, class: "btn btn-primary" %>
+    <%= link_to 'Search again', root_path, class: "btn btn-primary" %>
+    <%= link_to 'Make a booking', new_instrument_booking_path, class: "btn btn-primary" %>
+
     </div>
-    <p>Delivery option : <%= @instrument.delivery_option %></p>
-    <p>Daily hire rate £<%= @instrument.daily_rate %></p>
   </div>
-
-
-<%= link_to "Back to #{@instruments} list", instruments_path %>
-<%= link_to "Hire instrument", new_instrument_booking_path(@instrument) %>
-
 </div>
