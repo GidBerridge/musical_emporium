@@ -1,19 +1,23 @@
 
-<h1>Add an Instrument</h1>
-<%= form_for @instrument do |f| %>
-  <%= f.label :instrument_type %>
-  <%= f.text_field :instrument_type %>
-  <%= f.label :make %>
-  <%= f.text_field :make %>
-  <%= f.label :instrument_name %>
-  <%= f.text_field :instrument_name %>
-  <%= f.label :image_url %>
-  <%= f.text_field :image_url %>
-  <%= f.label :daily_rate %>
-  <%= f.number_field :daily_rate %>
-  <%= f.label :delivery_option %>
-  <%= f.text_field :delivery_option %>
 
-  <%= f.submit %>
-<% end %>
-<%= link_to 'Back to search', root_path%>
+<div class="container" style="padding: 32px;">
+  <h2>Add an Instrument</h2>
+  <%= form_for @instrument do |f| %>
+    <%= f.label :instrument_type %>
+    <%= f.text_field :instrument_type %>
+    <%= f.label :make %>
+    <%= f.text_field :make %>
+    <%= f.label :instrument_name %>
+    <%= f.text_field :instrument_name %>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+    <%= f.label :daily_rate %>
+    <%= f.number_field :daily_rate %>
+    <%= f.label :delivery_option %>
+    <%= f.text_field :delivery_option %>
+
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>
+  <%= link_to 'Back to search', root_path, class: "btn btn-primary" %>
+</div>
+
