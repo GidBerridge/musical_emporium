@@ -2,7 +2,10 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1><%= "Take a closer look" %></h1>
+      <div class="heading">
+        <h1><%= "Take a closer look" %></h1>
+        <div class="instrument-image"> <%= image_tag(@instrument.image_url) %></div>
+      </div>
       <table class="table table-bordered">
         <tbody>
           <tr>
@@ -11,7 +14,6 @@
           </tr>
           <tr>
             <th scope="row"><%= @instrument.make + " " + @instrument.instrument_name%></th>
-            <div class="instrument-image"> <%= image_tag(@instrument.image_url) %>
             </div>
           <tr>
             <th scope="row">Daily Rate</th>

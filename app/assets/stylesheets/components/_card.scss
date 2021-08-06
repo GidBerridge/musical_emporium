@@ -9,9 +9,19 @@
   width: 200px;
   flex-wrap: wrap;
 
+  // .img-frame {
+  //   max-height: 200px;
+  // }
+
+  .img-frame {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+
+  }
 
   img {
-    height: 100%;
+    height: cover;
     width: 120px;
     object-fit: cover;
   }
