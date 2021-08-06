@@ -4,12 +4,11 @@
 
     <div class="container" style="width: 200rem; margin-top: 32px;">
       <h2> Emporium finds for <%= params[:query] %></h2>
-      <div class="d-flex justify-content-around">
+      <div class="cards">
       <!-- <div class="row row-cols-1 row-cols-md-3"> -->
         <!-- <div class="col"> -->
           <% @instruments.each do |instrument| %>
           <div class="card-product">
-            <!-- to do image link here -->
             <p><%= image_tag instrument.image_url %></p>
             <div class="card-body">
               <h4><%= link_to "#{instrument.make + ' ' + instrument.instrument_name}", instrument_path(instrument) %></h4>
