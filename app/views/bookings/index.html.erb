@@ -10,7 +10,13 @@
   <div class="cards">
     <% @bookings.each do |booking| %>
       <div class="card-product">
-        <div class="img-frame"><%= image_tag booking.instrument.image_url %></div>
+        <div class="img-frame">
+          <% if booking.instrument.photo.key.nil? %>
+              <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
+            <% else %>
+              <%= cl_image_tag(booking.instrument.photo.key) %>
+            <% end %>
+          </div>
         <div class="card-body">
           <h3><%= "#{booking.instrument.make + ' ' + booking.instrument.instrument_name}"%></h3>
           <p>Booking Start Date : <%= booking.start_date %></p>

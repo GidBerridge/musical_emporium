@@ -1,11 +1,10 @@
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
       <div class="heading">
         <h1><%= "Take a closer look" %></h1>
         <div class="instrument-image">
-          <% if @instrument.photo.key.nil? %>
+          <% if instrument.photo.key.nil? %>
             <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
           <% else %>
             <%= cl_image_tag(@instrument.photo.key) %>
@@ -32,7 +31,7 @@
         </tbody>
       </table>
     <%= link_to 'Add a new instrument listing', new_instrument_path, class: "btn btn-primary" %>
-    <%= link_to "Back to #{@instrument.instrument_type}s", :back, class: "btn btn-primary" %>
+
     <%= link_to 'Make a booking', new_instrument_booking_path(@instrument), class: "btn btn-primary" %>
 
     </div>
