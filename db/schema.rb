@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 2021_08_07_103021) do
 
   create_table "bookings", force: :cascade do |t|
     t.date "start_date"
+    t.integer "id_instruments"
+    t.integer "id_users"
     t.date "end_date"
     t.float "cost"
     t.datetime "created_at", precision: 6, null: false
@@ -61,10 +63,10 @@ ActiveRecord::Schema.define(version: 2021_08_07_103021) do
     t.float "daily_rate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id"
     t.string "make"
     t.string "instrument_name"
     t.string "image_url"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_instruments_on_user_id"
   end
 
