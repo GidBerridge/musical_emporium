@@ -9,8 +9,14 @@
         <!-- <div class="col"> -->
           <% @instruments.each do |instrument| %>
           <div class="card-product">
-            <div class="img-frame"><%= image_tag instrument.image_url %></div>
-            <div class="card-body">
+          <div class="img-frame">
+            <% if instrument.photo.key.nil? %>
+              <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
+            <% else %>
+              <%= cl_image_tag(instrument.photo.key) %>
+            <% end %>
+          </div>
+          <div class="card-body">
               <h4><%= link_to "#{instrument.make + ' ' + instrument.instrument_name}", instrument_path(instrument) %></h4>
               <!-- <p class="card-text"><%= instrument.instrument_name %></p> -->
               <p><%= instrument.delivery_option %></p>
