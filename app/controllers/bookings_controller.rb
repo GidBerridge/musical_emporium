@@ -10,13 +10,14 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @instrument = Instrument.find(params[:instrument_id])
     @booking = Booking.new(booking_params)
-    @booking.user = User.first
+    @instrument = Instrument.find(params[:instrument_id])
     @booking.instrument = @instrument
+    @booking.user = current_user
     if @booking.save
       redirect_to instrument_bookings_path(@instrument)
     else
+      raise
       render "bookings/new"
     end
   end

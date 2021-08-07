@@ -8,8 +8,8 @@ class User < ApplicationRecord
   # dependent: :destroy
   has_many :bookings_as_owner, through: :instruments, source: :bookings
 
-  validates :name, presence: true, uniqueness: true
-  validates :location, presence: true
+  # validates :name, presence: true, uniqueness: true
+  # validates :location, presence: true
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable

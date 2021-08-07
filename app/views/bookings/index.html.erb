@@ -13,8 +13,9 @@
         <div class="img-frame"><%= image_tag booking.instrument.image_url %></div>
         <div class="card-body">
           <h3><%= "#{booking.instrument.make + ' ' + booking.instrument.instrument_name}"%></h3>
-          <p><%= booking.start_date %></p>
-          <p>£<%= booking.end_date %></p>
+          <p>Booking Start Date : <%= booking.start_date %></p>
+          <p>Booking End Date : <%= booking.end_date %></p>
+          <p>Cost : £<%= booking.instrument.daily_rate * (booking.end_date - booking.start_date) %>
         </div>
       </div>
     <% end %>
