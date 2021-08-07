@@ -4,7 +4,7 @@
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
       <div class="heading">
         <h1><%= "Take a closer look" %></h1>
-        <div class="instrument-image"> <%= image_tag(@instrument.image_url) %></div>
+         <div class="instrument-image"> <%= cl_image_tag(@instrument.photo.key) %></div>
       </div>
       <table class="table table-bordered">
         <tbody>
@@ -25,7 +25,7 @@
           </tr>
         </tbody>
       </table>
-    <%= link_to 'Add a new listing', new_instrument_path, class: "btn btn-primary" %>
+    <%= link_to 'Add a new instrument listing', new_instrument_path, class: "btn btn-primary" %>
     <%= link_to "Back to #{@instrument.instrument_type}s", :back, class: "btn btn-primary" %>
     <%= link_to 'Make a booking', new_instrument_booking_path(@instrument), class: "btn btn-primary" %>
 
