@@ -1,5 +1,5 @@
 class InstrumentsController < ApplicationController
-
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     if params[:query].present?
       @instruments = Instrument.where(instrument_type: params[:query].capitalize)
