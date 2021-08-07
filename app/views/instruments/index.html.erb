@@ -14,7 +14,7 @@
               <h4><%= link_to "#{instrument.make + ' ' + instrument.instrument_name}", instrument_path(instrument) %></h4>
               <!-- <p class="card-text"><%= instrument.instrument_name %></p> -->
               <p><%= instrument.delivery_option %></p>
-              <p><%= instrument.daily_rate %></p>
+              <p>£<%= instrument.daily_rate %></p>
             </div>
           </div>
           <% end %>
