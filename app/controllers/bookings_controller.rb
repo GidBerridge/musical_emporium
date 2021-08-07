@@ -15,9 +15,9 @@ class BookingsController < ApplicationController
     @booking.user = User.first
     @booking.instrument = @instrument
     if @booking.save
-      redirect_to instrument_path(@instrument)
+      redirect_to instrument_bookings_path(@instrument)
     else
-      render "instruments/show"
+      render "bookings/new"
     end
   end
 
@@ -26,7 +26,7 @@ class BookingsController < ApplicationController
   # end
 
   def booking_params
-    params.require(:booking).permit(:cost, :start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 
 end
