@@ -46,10 +46,6 @@ class InstrumentsController < ApplicationController
     redirect_to instruments_path
   end
 
-  # def search
-  #   @search = Instrument.find(params[:instrument_type])
-  # end
-
   private
 
   def instrument_params

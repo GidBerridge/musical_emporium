@@ -1,22 +1,9 @@
-<!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))>
-  <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
-  <div class="container">
-    <h1>Thank you for your booking!</h1>
-  </div>
-</div> -->
-
 <div class="container" style="width: 200rem; margin-top: 32px;">
   <h2 style="text-align:center;">Your Bookings</h2>
   <div class="cards">
     <% @bookings.each do |booking| %>
       <div class="card-product">
-        <div class="img-frame">
-          <% if booking.instrument.photo.key.nil? %>
-              <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
-            <% else %>
-              <%= cl_image_tag(booking.instrument.photo.key) %>
-            <% end %>
-          </div>
+        <div class="img-frame"><%= image_tag booking.instrument.image_url %></div>
         <div class="card-body">
           <h3><%= "#{booking.instrument.make + ' ' + booking.instrument.instrument_name}"%></h3>
           <p>Booking Start Date : <%= booking.start_date %></p>

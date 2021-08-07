@@ -1,13 +1,8 @@
 class UsersController < ApplicationController
-  def show
-    @user = User.find(params[:id])
+<<<<<<< HEAD
 
-    # the `geocoded` scope filters only users with coordinates (latitude & longitude)
-    @markers = @flats.geocoded.map do |flat|
-      {
-        lat: flat.latitude,
-        lng: flat.longitude
-      }
-    end
+  def show
+    @bookings = current_user.bookings
   end
+
 end
