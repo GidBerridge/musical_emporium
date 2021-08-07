@@ -11,7 +11,7 @@
           <div class="card-product">
           <div class="img-frame">
             <% if instrument.photo.key.nil? %>
-              <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
+              <%= image_tag "instrument-stall.jpg", alt: "Musical Emporium" %>
             <% else %>
               <%= cl_image_tag(instrument.photo.key) %>
             <% end %>
