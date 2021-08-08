@@ -41,3 +41,20 @@
     margin-top: 8px;
   }
 }
+
+.card-forms {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 32px;
+  padding: 32px;
+  flex-wrap: wrap;
+
+  h2 {
+    color: #03256C
+  }
+
+}

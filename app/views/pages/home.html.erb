@@ -9,13 +9,14 @@
      <%= form_tag instruments_path, method: :get do %>
       <%= text_field_tag :query,
         params[:query],
-        class: "form-control",
+        class: "form-control", id: "home-search",
         placeholder: "Find an instrument"
+
       %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
+      <%= submit_tag "Search", class: "btn btn-basic" %>
     <% end %>
   </div>
 </div>
 
 
-<%= current_user %>
+
