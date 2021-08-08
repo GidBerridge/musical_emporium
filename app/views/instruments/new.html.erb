@@ -10,7 +10,7 @@
           <%= %>
           <%= f.input :make, placeholder:  "e.g Fender, Yamaha, Steinway " %>
           <%= f.input :instrument_name, label: "Model", :collection => %w[Brass Percussion Strings Woodwind] %>
-          <%= f.input :daily_rate, :collection => %w[£50.00 £75.00 £100.00 £125.00 £150.00 £175.00 £200.00 £225.00 £250.00] %>
+          <%= f.input :daily_rate, :collection => %w[50.00 75.00 100.00 125.00 150.00 175.00 200.00 225.00 250.00] %>
           <%= f.input :delivery_option, as: :radio_buttons, collection: ["Collection", "Courier"] %>
           <%= f.input :photo, as: :file %>
           <%= f.submit class: "btn btn-basic" %>
