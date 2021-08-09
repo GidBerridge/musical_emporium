@@ -1,24 +1,12 @@
-<div class="container" style="width: 200rem; margin-top: 32px;">
-  <h2 style="text-align:center;">Your Bookings</h2>
-  <div class="cards">
-    <% @bookings.each do |booking| %>
-      <div class="card-product">
-        <div class="img-frame">
-          <% if booking.instrument.photo.key.nil? %>
-            <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
-          <% else %>
-            <%= cl_image_tag(booking.instrument.photo.key) %>
-          <% end %>
-        </div>
-        <div class="card-body">
-          <h3><%= "#{booking.instrument.make + ' ' + booking.instrument.instrument_name}"%></h3>
-          <p>Booking Start Date : <%= booking.start_date %></p>
-          <p>Booking End Date : <%= booking.end_date %></p>
-          <p>Cost : £<%= booking.instrument.daily_rate * (booking.end_date - booking.start_date) %>
-        </div>
-      </div>
-    <% end %>
-  </div>
+<%= render 'shared/show.html.erb' %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <%= link_to 'Add a new instrument listing', new_instrument_path, class: "btn btn-primary" %>
+      <!-- <%= link_to "My instruments #{@instrument.instrument_type}s", :back, class: "btn btn-primary" %> -->
+      <%= link_to 'Make a booking', new_instrument_booking_path(@instrument), class: "btn btn-primary" %>
 
-  <div><%= link_to 'Search again', root_path, class: "btn btn-primary" %></div>
+    </div>
+  </div>
 </div>
+

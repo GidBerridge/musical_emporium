@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   end
   devise_for :users
 
-  get "profile", action: :show, controller: "users"
+  get "profile", action: :index, controller: "users"
 end
