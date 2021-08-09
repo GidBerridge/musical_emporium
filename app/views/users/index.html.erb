@@ -1,0 +1,55 @@
+<div class="container" style="width: 200rem; margin-top: 32px;">
+  <h2 style="text-align:center;">Your Bookings</h2>
+  <div class="cards">
+    <% @bookings.each do |booking| %>
+      <div class="card-product">
+        <!-- <div class="img-frame"> -->
+          <% if booking.instrument.photo.key.nil? %>
+            <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
+          <% else %>
+            <%= cl_image_tag(booking.instrument.photo.key) %>
+          <% end %>
+        <!-- </div> -->
+        <div class="card-body">
+          <h3><%= "#{booking.instrument.make + ' ' + booking.instrument.instrument_name}"%></h3>
+          <p>Booking Start Date : <%= booking.start_date %></p>
+          <p>Booking End Date : <%= booking.end_date %></p>
+          <p>Cost : £<%= booking.instrument.daily_rate * (booking.end_date - booking.start_date) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div><%= link_to 'Search again', root_path, class: "btn btn-primary" %></div>
+</div>
+
+
+<div class="container" style="width: 200rem; margin-top: 32px;">
+  <h2 style="text-align:center;">Your Instruments</h2>
+  <div class="cards">
+    <% @instruments.each do |instrument| %>
+      <div class="card-product">
+        <div class="img-frame">
+          <% if booking.instrument.photo.key.nil? %>
+            <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
+          <% else %>
+            <%= cl_image_tag(booking.instrument.photo.key) %>
+          <% end %>
+        </div>
+        <div class="card-body">
+          <h3><%= "#{instrument.make + ' ' + instrument.instrument_name}"%></h3>
+          <%= link_to 'Delete an instrument',
+                instrument_path(instrument), class: "btn btn-basic btn-sm",
+                method: :delete,
+                data: { confirm: "Are you sure you want to delete this instrument?"} %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <!-- <div><%= link_to 'Search again', root_path, class: "btn btn-primary" %></div> -->
+</div>
+
+
+
+
