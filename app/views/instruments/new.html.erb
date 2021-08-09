@@ -1,18 +1,25 @@
 
 
-<div class="container" style="padding: 32px; width: 800px;">
-  <h2>Add an Instrument</h2>
-  <%= simple_form_for @instrument do |f| %>
-    <%= f.input :instrument_type %>
-    <%= f.input :make %>
-    <%= f.input :instrument_name, :collection => %w[Brass Percussion Strings Woodwind] %>
-    <%= f.input :daily_rate %>
-    <%= f.input :delivery_option, as: :radio_buttons, collection: ["Collection", "Courier"] %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit class: "btn btn-primary" %>
-  <% end %>
+<div class="container">
+   <div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+      <div class="card-forms">
+        <h2>Add an Instrument</h2>
+        <%= simple_form_for @instrument do |f| %>
+          <%= f.input :instrument_type, placeholder:  "e.g. guitar, drums, piano" %>
+          <%= %>
+          <%= f.input :make, placeholder:  "e.g Fender, Yamaha, Steinway " %>
+          <%= f.input :instrument_name, label: "Model", :collection => %w[Brass Percussion Strings Woodwind] %>
+          <%= f.input :daily_rate, :collection => %w[50.00 75.00 100.00 125.00 150.00 175.00 200.00 225.00 250.00] %>
+          <%= f.input :delivery_option, as: :radio_buttons, collection: ["Collection", "Courier"] %>
+          <%= f.input :photo, as: :file %>
+          <%= f.submit class: "btn btn-basic" %>
+        <% end %>
 
-  <%= link_to 'Back to search', root_path %>
+        <!-- <div style="margin-top: 24px; text-decoration: none;" ><%= link_to 'Back to search', root_path %></div> -->
+      </div>
+    </div>
+  </div>
 </div>
 
 
