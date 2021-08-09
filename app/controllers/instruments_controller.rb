@@ -10,14 +10,14 @@ class InstrumentsController < ApplicationController
 
   def show
     @instrument = Instrument.find(params[:id])
-    @user = User.find(params[:id])
+    @user = User.find(@instrument.user_id)
     # the `geocoded` scope filters only users with coordinates (latitude & longitude)
-    @markers = @users.geocoded.map do |user|
-      {
-        lat: user.latitude,
-        lng: user.longitude
-      }
-    end
+    # @markers = @user.geocoded.map do |user|
+    #   {
+    #     lat: user.latitude,
+    #     lng: user.longitude
+    #   }
+    # end
   end
 
   def new

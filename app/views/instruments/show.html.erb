@@ -5,13 +5,13 @@
       <div class="heading">
         <h1><%= "Take a closer look" %></h1>
 
-        <div class="instrument-image"> <%= cl_image_tag(@instrument.photo.key) %></div>
+        <div class="instrument-image"> <%#= cl_image_tag(@instrument.photo.key) %></div>
 
         <div class="instrument-image">
           <% if @instrument.photo.key.nil? %>
             <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
           <% else %>
-            <%= cl_image_tag(@instrument.photo.key) %>
+            <%#= cl_image_tag(@instrument.photo.key) %>
           <% end %>
         </div>
 
