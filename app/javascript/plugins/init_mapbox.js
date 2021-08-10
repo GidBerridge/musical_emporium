@@ -12,24 +12,23 @@ const initMapbox = () => {
       });
     }
     const markers = JSON.parse(mapElement.dataset.markers);
+
     markers.forEach((marker) => {
+      console.log(marker.lng)
       new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
         .addTo(map);
     });
-    const fitMapToMarkers = (map, markers) => {
-    const bounds = new mapboxgl.LngLatBounds();
-    markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-    map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
-  };
+    console.log(markers)
 
-  if (mapElement) {
-  // [ ... ]
     fitMapToMarkers(map, markers);
-  }
 };
 
-
+const fitMapToMarkers = (map, markers) => {
+  const bounds = new mapboxgl.LngLatBounds();
+  markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
+  map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
+};
 
 
 
