@@ -22,7 +22,7 @@
             </div>
           <tr>
             <th scope="row">Daily Rate</th>
-            <td>£<%= @instrument.daily_rate %></td>
+            <td><%= number_to_currency(@instrument.daily_rate, unit: "£") %></td>
           </tr>
           <tr>
             <th scope="row">Delivery Options</th>
@@ -30,13 +30,22 @@
           </tr>
         </tbody>
       </table>
-      <%= link_to 'Delete instrument',
-                instrument_path(@instrument), class: "btn btn-basic btn-sm",
-                method: :delete,
-                data: { confirm: "Are you sure you want to delete this instrument?"} %>
-      <%= link_to 'Edit instrument',
-                edit_instrument_path(@instrument), class: "btn btn-basic btn-sm" %>
 
+      <div id="map"
+      style="width: 100%; height: 400px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+    <%= link_to 'Add a new instrument listing', new_instrument_path, class: "btn btn-primary" %>
+    <%= link_to "Back to #{@instrument.instrument_type}s", :back, class: "btn btn-primary" %>
+    <%= link_to 'Make a booking', new_instrument_booking_path(@instrument), class: "btn btn-primary" %>
+    <!-- <#% raise %> -->
+    <%= link_to 'Delete instrument',
+        instrument_path(@instrument), class: "btn btn-basic btn-sm",
+        method: :delete,
+        data: { confirm: "Are you sure you want to delete this instrument?"} %>
+    <%= link_to 'Edit instrument',
+        edit_instrument_path(@instrument), class: "btn btn-basic btn-sm" %>
     </div>
   </div>
 </div>
