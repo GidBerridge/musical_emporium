@@ -46,6 +46,8 @@ Instrument.create!(
   image_url: "/assets/guitars/guitar_3_fender_stratocaster.jpeg",
   delivery_option: "Collect",
   daily_rate: 100.00,
+  description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  category: "String",
   user_id: User.all.sample.id
   )
 
@@ -56,6 +58,8 @@ Instrument.create!(
   image_url: "/assets/guitars/guitar_5_gibson_les_paul.jpeg",
   delivery_option: "Courier",
   daily_rate: 110.00,
+  description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  category: "String",
   user_id: User.all.sample.id
   )
 
@@ -66,6 +70,8 @@ Instrument.create!(
   image_url: "/assets/guitars/guitar_4_fender_telecaster.jpeg",
   delivery_option: "Courier",
   daily_rate: 85.00,
+  description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  category: "String",
   user_id: User.all.sample.id
   )
 
@@ -76,6 +82,8 @@ Instrument.create!(
   image_url: "/assets/pianos/piano_1_yamaha_baby_piano.jpeg",
   delivery_option: "Collect",
   daily_rate: 240.00,
+  description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  category: "Keys",
   user_id: User.all.sample.id
   )
 
@@ -86,6 +94,8 @@ Instrument.create!(
   image_url: "/assets/pianos/piano_3_kurzweil_cup2.jpeg",
   delivery_option: "Collect",
   daily_rate: 210.00,
+  description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  category: "Keys",
   user_id: User.all.sample.id
   )
 
@@ -96,6 +106,8 @@ Instrument.create!(
   image_url: "/assets/trombones/trombone_3_yamaha_466.jpeg",
   delivery_option: "Collect",
   daily_rate: 210.00,
+  description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  category: "Brass",
   user_id: User.all.sample.id
   )
 
@@ -106,6 +118,8 @@ Instrument.create!(
   image_url: "/assets/sax/sax_3_jupiter_alto.jpeg",
   delivery_option: "Courier",
   daily_rate: 60.00,
+  description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  category: "Woodwind",
   user_id: User.all.sample.id
   )
 

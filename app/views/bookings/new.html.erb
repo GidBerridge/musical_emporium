@@ -1,19 +1,22 @@
 <div class="container">
-  <div class="form-wrapper">
-    <h2>Check availability</h2>
-    <p>Daily Rate: £<%= @instrument.daily_rate %></p>
-    <p>Item: <%= @instrument.instrument_name %></p>
+ <div class="row justify-content-center">
+  <div class="col-12 col-lg-6">
+      <h2>Check availability</h2>
+        <p>Daily Rate: £<%= @instrument.daily_rate %></p>
+        <p>Item: <%= @instrument.instrument_name %></p>
 
-    <%#= simple_form_for Booking.new do |f| %>
-    <%= simple_form_for [@instrument, @booking] do |f| %>
-      <%= f.input :start_date, as: :string, required: true, input_html: {class: "datepicker"} %>
-      <%= f.input :end_date, as: :string, required: true, input_html: {class: "datepicker"} %>
-      <p>Cost : £<%#= booking.instrument.daily_rate * (booking.end_date - booking.start_date) %>
-      <%= f.button :submit, "Reserve", class: "btn btn-primary" %>
-    <% end %>
-    <br>
-      <%= link_to "Back to search", :back, class: "btn btn-basic m-2" %>
+        <%= simple_form_for [@instrument, @booking] do |f| %>
+          <%= f.input :start_date, as: :string, required: true, input_html: {class: "datepicker"} %>
+          <%= f.input :end_date, as: :string, required: true, input_html: {class: "datepicker"} %>
+          <p>Cost : £<%#= booking.instrument.daily_rate * (booking.end_date - booking.start_date) %>
+          <%= f.button :submit, "Reserve", class: "btn btn-primary" %>
+        <% end %>
+      <br>
+        <%= link_to "Back to search", :back, class: "btn btn-basic m-2" %>
+    </div>
   </div>
+</div>
+
 
 
 <!-- <div class=container>
