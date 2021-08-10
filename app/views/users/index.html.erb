@@ -30,10 +30,10 @@
     <% @instruments.each do |instrument| %>
       <div class="card-product">
         <div class="img-frame">
-          <% if booking.instrument.photo.key.nil? %>
+          <% if instrument.photo.key.nil? %>
             <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
           <% else %>
-            <%= cl_image_tag(booking.instrument.photo.key) %>
+            <%= cl_image_tag(instrument.photo.key) %>
           <% end %>
         </div>
         <div class="card-body">
