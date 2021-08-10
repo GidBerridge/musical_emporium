@@ -1,5 +1,7 @@
 class InstrumentsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_instrument, only: [:show, :edit, :update, :destroy]
+
   def index
     if params[:query].present?
       @instruments = Instrument.where(instrument_type: params[:query].capitalize)
@@ -8,9 +10,7 @@ class InstrumentsController < ApplicationController
     end
   end
 
-  def show
-    @instrument = Instrument.find(params[:id])
-  end
+  def show; end
 
   def new
     @instrument = Instrument.new
@@ -26,19 +26,23 @@ class InstrumentsController < ApplicationController
     end
   end
 
+  def edit; end
+
   def update
-    @instrument = Instrument.find(params[:id])
     @instrument.update(instrument_params)
-    redirect_to instruments_path
+    redirect_to instrument_path(@instrument)
   end
 
   def destroy
-    @instrument = Instrument.find(params[:id])
     @instrument.destroy
     redirect_to instruments_path
   end
 
   private
+
+  def set_instrument
+    @instrument = Instrument.find(params[:id])
+  end
 
   def instrument_params
     params.require(:instrument).permit(:make, :instrument_type, :delivery_option, :daily_rate, :instrument_name, :image, :photo)
