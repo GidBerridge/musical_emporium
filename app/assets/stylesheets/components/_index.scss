@@ -5,10 +5,5 @@
 @import "button";
 @import "card";
 @import "banner";
+@import "form";
 // @import "container";
-
-.cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}

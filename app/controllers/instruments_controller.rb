@@ -35,8 +35,9 @@ class InstrumentsController < ApplicationController
 
   def create
     @instrument = Instrument.new(instrument_params)
-    @instrument.user = User.first
-    if @instrument.save!
+    @instrument.user = current_user
+    if @instrument.save
+      @instrument.save!
       redirect_to instrument_path(@instrument)
     else
       render :new
