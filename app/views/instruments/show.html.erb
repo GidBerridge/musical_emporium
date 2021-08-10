@@ -1,11 +1,9 @@
 <%= render 'shared/show.html.erb' %>
 
-
-
-
-<!-- <div class="container">
+<div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+
       <div class="heading">
         <h1><%= "Take a closer look" %></h1>
 
@@ -44,11 +42,14 @@
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
-    <%= link_to 'Add a new instrument listing', new_instrument_path, class: "btn btn-primary" %>
-    <%= link_to "Back to #{@instrument.instrument_type}s", :back, class: "btn btn-primary" %>
-    <%= link_to 'Make a booking', new_instrument_booking_path(@instrument), class: "btn btn-primary" %>
+    <%= link_to 'Add a new instrument listing', new_instrument_path, class: "btn btn-basic m-2" %>
+    <%= link_to "Back to #{@instrument.instrument_type}s", :back, class: "btn btn-basic m-2" %>
+    <%= link_to 'Make a booking', new_instrument_booking_path(@instrument), class: "btn btn-basic m-2" %>
+
 
     </div>
   </div>
 </div>
- -->
+
+
+
