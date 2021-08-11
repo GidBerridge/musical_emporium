@@ -5,20 +5,20 @@
     <div class="container" style="width: 200rem; margin-top: 32px;">
       <h2 style="text-align:center;"> Emporium finds for <%= params[:query] %></h2>
       <div class="cards">
-      <!-- <div class="row row-cols-1 row-cols-md-3"> -->
-        <!-- <div class="col"> -->
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col">
           <% @instruments.each do |instrument| %>
           <div class="card-product">
           <div class="img-frame">
             <% if instrument.photo.key.nil? %>
               <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
-            <!-- <#% else %> -->
-              <!-- <#%= cl_image_tag(instrument.photo.key) %> -->
+            <% else %>
+              <%= cl_image_tag(instrument.photo.key) %>
             <% end %>
           </div>
           <div class="card-body">
               <h4><%= link_to "#{instrument.make + ' ' + instrument.instrument_name}", instrument_path(instrument) %></h4>
-              <!-- <p class="card-text"><%= instrument.instrument_name %></p> -->
+              <p class="card-text"><%= instrument.instrument_name %></p>
               <p><%= instrument.delivery_option %></p>
               <p><%= number_to_currency(instrument.daily_rate, unit: "£") %></p>
             </div>
