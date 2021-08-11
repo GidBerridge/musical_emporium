@@ -21,7 +21,7 @@
           <h3><%= "#{booking.instrument.make + ' ' + booking.instrument.instrument_name}"%></h3>
           <p>Booking Start Date : <%= booking.start_date %></p>
           <p>Booking End Date : <%= booking.end_date %></p>
-          <p>Cost : £<%= booking.instrument.daily_rate * (booking.end_date - booking.start_date) %>
+          <p>Cost : <%= number_to_currency(booking.instrument.daily_rate * (booking.end_date - booking.start_date), unit: "£") %>
         </div>
       </div>
     <% end %>

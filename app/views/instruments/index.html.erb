@@ -18,7 +18,7 @@
                 <%= cl_image_tag(instrument.photo.key) %>
               <% end %>
             </div>
-            <div class="card-body">
+
               <h4><%= link_to "#{instrument.make + ' ' + instrument.instrument_name}", instrument_path(instrument) %></h4>
               <p class="card-text"><%= instrument.instrument_name %></p>
               <p><%= instrument.delivery_option %></p>
