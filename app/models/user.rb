@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :reviews
   # dependent: :destroy
   has_many :bookings_as_owner, through: :instruments, source: :bookings
+  has_one_attached :avatar
 
   validates :name, presence: true, uniqueness: true
   validates :location, presence: true

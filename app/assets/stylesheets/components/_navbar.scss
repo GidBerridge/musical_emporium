@@ -14,8 +14,10 @@
 .navbar {
   display: flex;
   align-content: center;
-  position: fixed;
+  position: sticky;
   left: 0;
   top: 0;
   width: 100%;
+  z-index: 1;
+  margin-bottom: 20px
 }
