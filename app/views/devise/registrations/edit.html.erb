@@ -14,6 +14,9 @@
                   required: false %>
       <%= f.input :location,
                   required: false %>
+      <%= f.input :avatar, as: :file,
+                  required: false %>
+
       <%= f.input :password,
                   hint: "leave it blank if you don't want to change it",
                   required: false,

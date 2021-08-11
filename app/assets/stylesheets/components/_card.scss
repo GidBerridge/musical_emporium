@@ -16,13 +16,13 @@
   .img-frame {
     display: flex;
     align-items: center;
-    padding: 2rem;
+
 
   }
 
   img {
-    height: cover;
-    width: 120px;
+    height: 150px;
+    width: 100%;
     object-fit: cover;
   }
 
