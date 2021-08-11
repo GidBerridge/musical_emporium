@@ -1,7 +1,7 @@
 <div class="container">
   <div class="form-wrapper">
     <h2>Check availability</h2>
-    <p>Daily Rate: £<%= @instrument.daily_rate %></p>
+    <p>Daily Rate: <%= number_to_currency(@instrument.daily_rate, unit: "£") %></p>
     <p>Item: <%= @instrument.instrument_name %></p>
 
     <%#= simple_form_for Booking.new do |f| %>
