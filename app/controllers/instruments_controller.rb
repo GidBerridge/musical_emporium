@@ -4,7 +4,7 @@ class InstrumentsController < ApplicationController
 
   def index
     if params[:query].present?
-      @instruments = Instrument.where(instrument_type: params[:query].capitalize)
+      @instruments = Instrument.where("instrument_type ILIKE ?", "%#{params[:query]}%")
     else
       @instruments = Instrument.all
     end
