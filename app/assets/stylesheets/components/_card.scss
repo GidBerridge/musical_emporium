@@ -52,6 +52,7 @@
   margin: 32px;
   padding: 32px;
   flex-wrap: wrap;
+  border-radius: 50px;
 
   h2 {
     color: #03256C
@@ -70,7 +71,6 @@
   justify-content: space-between;
   margin: 15px;
 
-
   img {
     height: 100%;
     width: 200px;
@@ -88,12 +88,12 @@
     line-height: 1.4;
     opacity: .7;
     margin: 0 10px 4px 0;
+    padding-right: 24px;
   }
 
   .card-basic-infos {
     padding: 16px;
     margin: 8px;
-    // padding: 15px;
   }
 }
 
