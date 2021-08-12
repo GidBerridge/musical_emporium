@@ -4,24 +4,24 @@
   <div class="d-flex justify-content-center">
     <h1 style="text-align:center;"> Emporium Finds For... <%= params[:query] %></h1>
   </div>
-<br>
+
     <div class="row">
+
+    <div class="instrument-card-box">
+
       <% @instruments.each do |instrument| %>
         <div class="col-4 " style= "align-content: space-between;">
           <div class="card-basic">
-            <!-- <div class="img-frame"> -->
-              <% if instrument.photo.key.nil? %>
-                <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
-              <% else %>
-                <%= cl_image_tag(instrument.photo.key) %>
-              <% end %>
-            <h4><%= link_to "#{instrument.make + ' ' + instrument.instrument_name}", instrument_path(instrument) %></h4>
-              <div class="card-basic-infos">
-                <p><%= instrument.instrument_name %></p>
-                <p><%= instrument.delivery_option %></p>
-                <p><%= number_to_currency(instrument.daily_rate, unit: "£") %></p>
-              </div>
-            <!-- </div> -->
+            <% if instrument.photo.key.nil? %>
+              <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
+            <% else %>
+              <%= cl_image_tag(instrument.photo.key) %>
+            <% end %>
+            <h4 class="instrument-title"><%= link_to "#{instrument.make + ' ' + instrument.instrument_name}", instrument_path(instrument) %></h4>
+            <div class="card-basic-infos">
+              <p><%= instrument.delivery_option %></p>
+              <p><%= number_to_currency(instrument.daily_rate, unit: "£") %></p>
+            </div>
           </div>
         </div>
       <% end %>
