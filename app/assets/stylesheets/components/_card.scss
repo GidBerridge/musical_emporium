@@ -30,14 +30,14 @@
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
-    margin: 0;
+    margin-top: 16px;
   }
 
   p {
     font-size: 12px;
     line-height: 1.4;
     opacity: .7;
-    margin-bottom: 0;
+    margin-bottom: 8px;
     margin-top: 8px;
   }
 }
@@ -60,38 +60,50 @@
 }
 
 
-.card-profile {
+.card-basic {
   overflow: hidden;
   height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+
+
+  img {
+    height: 100%;
+    width: 120px;
+    object-fit: cover;
+  }
+
+  h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 8px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+
+  .card-basic-infos {
+    padding: 16px;
+    margin: 8px;
+  }
 }
 
-.card-profile img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+#card-holder {
+  border-radius: 12px;
+  text-align: center;
+  margin: 16px;
+  background-color: black;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  h2 {
+    color: white;
+    padding-top: 24px;
+  }
 }
-
-.card-profile h2 {
-  font-size: 14px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-profile p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.card-profile .card-profile-infos {
-  padding: 16px;
-  margin: 8px;
-}
-
-

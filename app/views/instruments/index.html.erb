@@ -5,35 +5,33 @@
     <h2 style="text-align:center;"> Emporium finds for <%= params[:query] %></h2>
     <div><%= link_to 'Search again', root_path, class: "btn btn-primary ml-3" %></div>
   </div>
-  <div class="cards">
+
     <div class="row">
 
       <% @instruments.each do |instrument| %>
         <div class="col-4">
-          <div class="card-product">
-            <div class="img-frame">
+          <div class="card-basic">
+            <!-- <div class="img-frame"> -->
               <% if instrument.photo.key.nil? %>
                 <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
               <% else %>
                 <%= cl_image_tag(instrument.photo.key) %>
               <% end %>
-            </div>
-
-              <h4><%= link_to "#{instrument.make + ' ' + instrument.instrument_name}", instrument_path(instrument) %></h4>
-              <p class="card-text"><%= instrument.instrument_name %></p>
-              <p><%= instrument.delivery_option %></p>
-              <p><%= number_to_currency(instrument.daily_rate, unit: "£") %></p>
-            </div>
+            <h4><%= link_to "#{instrument.make + ' ' + instrument.instrument_name}", instrument_path(instrument) %></h4>
+              <div class="card-basic-infos">
+                <p><%= instrument.instrument_name %></p>
+                <p><%= instrument.delivery_option %></p>
+                <p><%= number_to_currency(instrument.daily_rate, unit: "£") %></p>
+              </div>
+            <!-- </div> -->
           </div>
         </div>
       <% end %>
+
     </div>
   </div>
       <!-- </div> -->
-      <!-- <%= link_to 'Add a new instrument', new_instrument_path, class: "btn btn-primary" %> -->
-
-
-
+      <!-- <#%= link_to 'Add a new instrument', new_instrument_path, class: "btn btn-primary" %> -->
 </div>
 
 

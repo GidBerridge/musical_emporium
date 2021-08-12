@@ -1,25 +1,33 @@
+<div class="container mt-5">
+<h2 style="text-align:center;">Hello <%= "#{current_user.name}" %>, welcome to Musical Emporium</h2>
+<h4 style="text-align:center;">You have <%= "#{current_user.bookings.count}" %> bookings & <%= "#{current_user.instruments.count}" %> instruments with us</h4>
+</div>
+
 <div class="d-flex justify-content-around">
   <div class="container" style="width: 200rem; margin-top: 32px;">
-    <h2 style="text-align:center;">Your Bookings</h2>
-    <!-- <div class="cards"> -->
-      <div class="d-flex justify-content-around" style="background-color: black;">
+
+
+    <div id="card-holder">
+      <h2 style="text-align:center;">Your Bookings</h2>
+      <div class="d-flex justify-content-around" >
       <% @bookings.each do |booking| %>
         <div class="card-product">
           <!-- <div class="img-frame"> -->
-            <!-- <#% if booking.instrument.photo.key.nil? %> -->
-              <%= image_tag "pianos/clock_icon.png", alt: "Musical Emporium" %>
-            <!-- <#% else %> -->
-              <!-- <#%= cl_image_tag(booking.instrument.photo.key) %> -->
-            <!-- <#% end %> -->
+          <!-- <#% if booking.instrument.photo.key.nil? %> -->
+          <%= image_tag "pianos/clock_icon.png", alt: "Musical Emporium" %>
+          <!-- <#% else %> -->
+          <!-- <#%= cl_image_tag(booking.instrument.photo.key) %> -->
+          <!-- <#% end %> -->
           <!-- </div> -->
           <div class="card-product-infos">
             <h4><%= "#{booking.instrument.make + ' ' + booking.instrument.instrument_name}"%></h4>
-            <p>Booking Start Date : <%= booking.start_date %></p>
-            <p>Booking End Date : <%= booking.end_date %></p>
-            <p>Cost : £<%= booking.instrument.daily_rate * (booking.end_date - booking.start_date) %>
+            <p><strong>Start Date : <%= booking.start_date %></p>
+            <p>End Date : <%= booking.end_date %></strong></p>
+            <h4>Cost : <%= number_to_currency(booking.instrument.daily_rate, unit: "£") %></h4>
           </div>
         </div>
       <% end %>
+      </div>
     </div>
 
     <!-- <div><#%= link_to 'Search again', root_path, class: "btn btn-primary" %></div> -->
@@ -27,17 +35,18 @@
 
 
   <div class="container" style="width: 200rem; margin-top: 32px;">
+    <div id="card-holder">
     <h2 style="text-align:center;">Your Instruments</h2>
-    <!-- <div class="cards"> -->
-      <div class="d-flex justify-content-around" style="background-color: black;">
+
+      <div class="d-flex justify-content-around" id="card-holder" style="background-color: black;">
       <% @instruments.each do |instrument| %>
         <div class="card-product">
           <!-- <div class="img-frame"> -->
-            <!-- <#% if instrument.photo.key.nil? %> -->
-              <%= image_tag "pianos/keyboard.png", alt: "keyboard-icon" %>
-            <!-- <#% else %> -->
-              <!-- <#%= cl_image_tag(instrument.photo.key) %> -->
-            <!-- <#% end %> -->
+          <!-- <#% if instrument.photo.key.nil? %> -->
+          <%= image_tag "pianos/keyboard.png", alt: "keyboard-icon" %>
+          <!-- <#% else %> -->
+          <!-- <#%= cl_image_tag(instrument.photo.key) %> -->
+          <!-- <#% end %> -->
           <!-- </div> -->
           <div class="card-product-infos">
             <h4><%= "#{instrument.make + ' ' + instrument.instrument_name}"%></h4>
@@ -54,8 +63,8 @@
             </div>
           </div>
         </div>
-
       <% end %>
+      </div>
     </div>
 
     <!-- <div><#%= link_to 'Search again', root_path, class: "btn btn-primary" %></div> -->
