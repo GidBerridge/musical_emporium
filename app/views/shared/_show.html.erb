@@ -10,7 +10,7 @@
         </div>
           <div class="card-basic col-12" style="height: 100%; width: 100%">
             <% if @instrument.photo.key.nil? %>
-              <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
+              <%= image_tag "instrument-stall.jpg", alt: "Musical Emporium" %>
             <% else %>
               <%= cl_image_tag(@instrument.photo.key) %>
             <% end %>
