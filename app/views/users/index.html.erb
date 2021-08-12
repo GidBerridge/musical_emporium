@@ -1,6 +1,6 @@
 <div class="container mt-5">
 <h2 style="text-align:center;">Hello <%= "#{current_user.name}" %>, welcome to Musical Emporium</h2>
-<h4 style="text-align:center;">You have <%= "#{current_user.bookings.count.pluralize('booking') }" %> & <%= "#{current_user.instruments.count}" %> instruments with us</h4>
+<h4 style="text-align:center;">You have <%= "#{pluralize current_user.bookings.count, "booking" }" %> & <%= "#{pluralize current_user.instruments.count, "instrument"}" %> with us</h4>
 </div>
 
 <div class="d-flex justify-content-around">
