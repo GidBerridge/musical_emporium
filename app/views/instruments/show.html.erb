@@ -1,8 +1,9 @@
 <%= render 'shared/show.html.erb' %>
 
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+    <div class="show-links">
       <%= link_to 'Add a new instrument listing', new_instrument_path, class: "btn btn-primary" %>
       <%= link_to "Back to #{@instrument.instrument_type}s", :back, class: "btn btn-primary" %>
       <%= link_to 'Make a booking', new_instrument_booking_path(@instrument), class: "btn btn-primary" %>
@@ -11,8 +12,10 @@
           instrument_path(@instrument), class: "btn btn-basic btn-sm",
           method: :delete,
           data: { confirm: "Are you sure you want to delete this instrument?"} %>
-      <%= link_to 'Edit instrument',
-          edit_instrument_path(@instrument), class: "btn btn-basic btn-sm" %>
+      <%=
+          link_to 'Edit instrument',
+          edit_instrument_path(@instrument), class: "btn btn-basic btn-sm" if (current_user.id == @instrument.user_id)
+          %>
 
     </div>
   </div>
