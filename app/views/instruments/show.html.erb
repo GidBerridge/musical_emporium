@@ -11,7 +11,8 @@
       <%= link_to 'Delete instrument',
           instrument_path(@instrument), class: "btn btn-basic btn-sm",
           method: :delete,
-          data: { confirm: "Are you sure you want to delete this instrument?"} %>
+          data: { confirm: "Are you sure you want to delete this instrument?"} if (current_user.id == @instrument.user_id)
+          %>
       <%=
           link_to 'Edit instrument',
           edit_instrument_path(@instrument), class: "btn btn-basic btn-sm" if (current_user.id == @instrument.user_id)
