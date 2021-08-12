@@ -14,12 +14,26 @@
       <table class="table table-bordered">
         <tbody>
           <tr>
-            <th scope="row">Instrument</th>
+            <th scope="row">Instrument Details</th>
             <td><%= @instrument.instrument_type %></td>
           </tr>
           <tr>
-            <th scope="row"><%= @instrument.make + " " + @instrument.instrument_name%></th>
-            </div>
+            <th scope="row">Instrument Category</th>
+            <td><%= @instrument.category %></td>
+          </tr>
+          <tr>
+            <th scope="row">Instrument Brand</th>
+              <td><%= @instrument.make %></td>
+          </tr>
+          <tr>
+            <th scope="row">Instrument Name</th>
+              <td><%= @instrument.instrument_name %></td>
+          </tr>
+          <tr>
+            <th scope="row">Description</th>
+            <td><%= @instrument.description %></td>
+          </tr>
+
           <tr>
             <th scope="row">Daily Rate</th>
             <td><%= number_to_currency(@instrument.daily_rate, unit: "£") %></td>
