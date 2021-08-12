@@ -45,8 +45,6 @@ ActiveRecord::Schema.define(version: 2021_08_10_195825) do
 
   create_table "bookings", force: :cascade do |t|
     t.date "start_date"
-    t.integer "id_instruments"
-    t.integer "id_users"
     t.date "end_date"
     t.float "cost"
     t.datetime "created_at", precision: 6, null: false
@@ -78,7 +76,9 @@ ActiveRecord::Schema.define(version: 2021_08_10_195825) do
     t.bigint "instrument_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
     t.index ["instrument_id"], name: "index_reviews_on_instrument_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -102,5 +102,5 @@ ActiveRecord::Schema.define(version: 2021_08_10_195825) do
   add_foreign_key "bookings", "instruments"
   add_foreign_key "bookings", "users"
   add_foreign_key "instruments", "users"
-  add_foreign_key "reviews", "instruments"
+  add_foreign_key "reviews", "users"
 end
