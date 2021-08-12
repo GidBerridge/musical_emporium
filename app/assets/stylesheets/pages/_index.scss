@@ -1,2 +1,14 @@
 // Import page-specific CSS files here.
 @import "home";
+
+
+.instrument-card-box {
+  margin: 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.instrument-title{
+  max-width: 35%;
+  padding-left: 4px;
+}
