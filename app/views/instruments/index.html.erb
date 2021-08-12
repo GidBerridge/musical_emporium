@@ -2,14 +2,15 @@
 
 <div class="container" style="width: 200rem;">
   <div class="d-flex justify-content-center">
-    <h2 style="text-align:center;"> Emporium finds for <%= params[:query] %></h2>
-    <div><%= link_to 'Search again', root_path, class: "btn btn-primary ml-3" %></div>
+    <h1 style="text-align:center;"> Emporium Finds For... <%= params[:query] %></h1>
   </div>
+
+    <div class="row">
 
     <div class="instrument-card-box">
 
       <% @instruments.each do |instrument| %>
-        <div class="col-4">
+        <div class="col-4 " style= "align-content: space-between;">
           <div class="card-basic">
             <% if instrument.photo.key.nil? %>
               <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
@@ -26,7 +27,11 @@
       <% end %>
 
     </div>
+    <br>
+    <div><%= link_to 'Search again', root_path, class: "btn btn-primary ml-3" %></div>
+
   </div>
+
       <!-- </div> -->
       <!-- <#%= link_to 'Add a new instrument', new_instrument_path, class: "btn btn-primary" %> -->
 </div>
