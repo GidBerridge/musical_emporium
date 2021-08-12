@@ -170,16 +170,4 @@ file = URI.open('https://images.pexels.com/photos/2105038/pexels-photo-2105038.j
   instrument.photo.attach(io: file, filename: 'A name', content_type: 'image/png')
 
 
-Instrument.create!(
-  instrument_type: "Saxophone",
-  make: "Jupiter",
-  instrument_name: "Alto",
-  image_url: "/assets/sax/sax_3_jupiter_alto.jpeg",
-  delivery_option: "Courier",
-  daily_rate: 60.00,
-  description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  category: "Woodwind",
-  user_id: User.all.sample.id
-  )
-
 puts "done"
