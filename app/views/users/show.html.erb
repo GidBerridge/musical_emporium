@@ -1,12 +1,19 @@
 <%= render 'shared/show.html.erb' %>
+
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
       <%= link_to 'Add a new instrument listing', new_instrument_path, class: "btn btn-primary" %>
-      <%= link_to "My instrumentss", profile_path, class: "btn btn-primary" %>
+
+      <%= link_to "back to ", profile_path, class: "btn btn-primary" %>
+
       <%= link_to 'Make a booking', new_instrument_booking_path(@instrument), class: "btn btn-primary" %>
 
     </div>
   </div>
 </div>
+
+
+
 

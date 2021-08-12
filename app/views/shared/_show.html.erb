@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
       <div class="heading">
-        <h1><%= "Take a closer look" %></h1>
+        <h3><%= "Take a closer look" %></h3>
         <div class="instrument-image">
           <% if @instrument.photo.key.nil? %>
             <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
@@ -36,7 +36,7 @@
 
           <tr>
             <th scope="row">Daily Rate</th>
-            <td>£<%= @instrument.daily_rate %></td>
+            <td><%= number_to_currency(@instrument.daily_rate, unit: "£") %></td>
           </tr>
           <tr>
             <th scope="row">Delivery Options</th>
@@ -44,13 +44,6 @@
           </tr>
         </tbody>
       </table>
-      <%= link_to 'Delete instrument',
-                instrument_path(@instrument), class: "btn btn-basic btn-sm",
-                method: :delete,
-                data: { confirm: "Are you sure you want to delete this instrument?"} %>
-      <%= link_to 'Edit instrument',
-                edit_instrument_path(@instrument), class: "btn btn-basic btn-sm" %>
-
     </div>
   </div>
 </div>

@@ -8,9 +8,26 @@ class InstrumentsController < ApplicationController
     else
       @instruments = Instrument.all
     end
+
+    # the `geocoded` scope filters only users with coordinates (latitude & longitude)
+    # @markers = @instruments.geocoded.map do |instrument|
+    #   {
+    #     lat: instrument.latitude,
+    #     lng: instrument.longitude
+    #   }
+    # end
   end
 
-  def show; end
+  def show
+    @instrument = Instrument.find(params[:id])
+    @user = User.find(@instrument.user_id)
+    # the `geocoded` scope filters only users with coordinates (latitude & longitude)
+    @markers = [{
+        lat: @user.latitude,
+        lng: @user.longitude
+      }]
+  end
+
 
   def new
     @instrument = Instrument.new
@@ -48,5 +65,4 @@ class InstrumentsController < ApplicationController
   def instrument_params
     params.require(:instrument).permit(:make, :instrument_type, :delivery_option, :daily_rate, :description, :category, :instrument_name, :image, :photo)
   end
-
 end

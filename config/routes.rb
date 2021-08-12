@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :instruments do
     resources :bookings, only: [ :new, :create, :index ]
   end
+
   devise_for :users
 
   get "profile", action: :index, controller: "users"
