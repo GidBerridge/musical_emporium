@@ -17,7 +17,6 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to instrument_bookings_path(@instrument)
     else
-      raise
       render "bookings/new"
     end
   end
