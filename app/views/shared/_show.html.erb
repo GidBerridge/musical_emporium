@@ -1,49 +1,56 @@
+<!-- <div class="container d-flex justify-content-center">
+  <div class="row ">
+    <div class="col-xs-12 col-sm-12 col-sm-offset-1"> -->
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <div class="heading">
-        <h1><%= "Take a closer look" %></h1>
-        <div class="instrument-image">
-          <% if @instrument.photo.key.nil? %>
-            <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
-          <% else %>
-            <%= cl_image_tag(@instrument.photo.key) %>
-          <% end %>
-        </div>
-      </div>
-      <table class="table table-bordered">
-        <tbody>
-          <tr>
-            <th scope="row">Instrument Details</th>
-            <td><%= @instrument.instrument_type %></td>
-          </tr>
-          <tr>
-            <th scope="row">Instrument Category</th>
-            <td><%= @instrument.category %></td>
-          </tr>
-          <tr>
-            <th scope="row">Instrument Brand</th>
-              <td><%= @instrument.make %></td>
-          </tr>
-          <tr>
-            <th scope="row">Instrument Name</th>
-              <td><%= @instrument.instrument_name %></td>
-          </tr>
-          <tr>
-            <th scope="row">Description</th>
-            <td><%= @instrument.description %></td>
-          </tr>
+   <div class="row justify-content-center flex-basis-100%" >
+    <div class="col-12 ">
 
-          <tr>
-            <th scope="row">Daily Rate</th>
-            <td><%= number_to_currency(@instrument.daily_rate, unit: "£") %></td>
-          </tr>
-          <tr>
-            <th scope="row">Delivery Options</th>
-            <td><%= @instrument.delivery_option %></td>
-          </tr>
-        </tbody>
-      </table>
+        <div class="heading">
+          <h1><%= "Take a closer look" %></h1>
+        </div>
+          <div class="card-basic col-12" style="height: 100%; width: 100%">
+            <% if @instrument.photo.key.nil? %>
+              <%= image_tag "instrument-stall.jpeg", alt: "Musical Emporium" %>
+            <% else %>
+              <%= cl_image_tag(@instrument.photo.key) %>
+            <% end %>
+
+
+          <table class="table table-bordered instrument-table">
+            <tbody>
+              <tr>
+                <th scope="row">Instrument Details</th>
+                <td><%= @instrument.instrument_type %></td>
+              </tr>
+              <tr>
+                <th scope="row">Instrument Category</th>
+                <td><%= @instrument.category %></td>
+              </tr>
+              <tr>
+                <th scope="row">Instrument Brand</th>
+                  <td><%= @instrument.make %></td>
+              </tr>
+              <tr>
+                <th scope="row">Instrument Name</th>
+                  <td><%= @instrument.instrument_name %></td>
+              </tr>
+              <tr>
+                <th scope="row">Description</th>
+                <td><%= @instrument.description %></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Daily Rate</th>
+                <td><%= number_to_currency(@instrument.daily_rate, unit: "£") %></td>
+              </tr>
+              <tr>
+                <th scope="row">Delivery Options</th>
+                <td><%= @instrument.delivery_option %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
     </div>
   </div>
 </div>

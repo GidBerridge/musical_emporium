@@ -43,7 +43,7 @@ puts "adding instruments"
   instrument = Instrument.create!(
     instrument_type: "Guitar",
     make: "Fender",
-    instrument_name: "Stratocaster 1996",
+    instrument_name: "Acoustic",
     delivery_option: "Collect",
     daily_rate: 100.00,
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -55,8 +55,8 @@ puts "adding instruments"
 file = URI.open('https://images.pexels.com/photos/3714523/pexels-photo-3714523.jpeg?cs=srgb&dl=pexels-kelvin-fran%C3%A7a-3714523.jpg&fm=jpg')
   instrument = Instrument.create!(
     instrument_type: "Guitar",
-    make: "Fender",
-    instrument_name: "Stratocaster 1996",
+    make: "Martin",
+    instrument_name: "Acoustic",
     delivery_option: "Collect",
     daily_rate: 100.00,
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -82,7 +82,7 @@ file = URI.open('https://images.pexels.com/photos/2105038/pexels-photo-2105038.j
   instrument = Instrument.create!(
     instrument_type: "Guitar",
     make: "Fender",
-    instrument_name: "Telecaster 1984",
+    instrument_name: "Acoustic 6 string",
     delivery_option: "Collect",
     daily_rate: 100.00,
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -94,8 +94,8 @@ file = URI.open('https://images.pexels.com/photos/2105038/pexels-photo-2105038.j
   file = URI.open('https://images.pexels.com/photos/3977174/pexels-photo-3977174.jpeg?cs=srgb&dl=pexels-viktor-mogilat-3977174.jpg&fm=jpg')
   instrument = Instrument.create!(
     instrument_type: "Guitar",
-    make: "Fender",
-    instrument_name: "Telecaster 1984",
+    make: "Ibanez",
+    instrument_name: "Acoustic",
     delivery_option: "Collect",
     daily_rate: 100.00,
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -107,8 +107,8 @@ file = URI.open('https://images.pexels.com/photos/2105038/pexels-photo-2105038.j
     file = URI.open('https://images.pexels.com/photos/1656415/pexels-photo-1656415.jpeg?cs=srgb&dl=pexels-lovely-ram-1656415.jpg&fm=jpg')
   instrument = Instrument.create!(
     instrument_type: "Guitar",
-    make: "Fender",
-    instrument_name: "Telecaster 1984",
+    make: "Washburn",
+    instrument_name: "Country",
     delivery_option: "Collect",
     daily_rate: 100.00,
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -120,8 +120,8 @@ file = URI.open('https://images.pexels.com/photos/2105038/pexels-photo-2105038.j
       file = URI.open('https://images.pexels.com/photos/92069/pexels-photo-92069.jpeg?cs=srgb&dl=pexels-markus-spiske-92069.jpg&fm=jpg')
   instrument = Instrument.create!(
     instrument_type: "Guitar",
-    make: "Fender",
-    instrument_name: "Telecaster 1984",
+    make: "Gibson",
+    instrument_name: "Electric",
     delivery_option: "Collect",
     daily_rate: 100.00,
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
