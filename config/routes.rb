@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [ :new, :create, :index ]
   end
 
+  resources :bookings, only: [ :show ]
   devise_for :users
 
   get "profile", action: :index, controller: "users"
