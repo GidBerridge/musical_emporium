@@ -1,1 +1,4 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Musical Emporium
+================
+
+An Airbandb style app that concentrated on peer to peer hiring of musical instruments. The app was made as part of the Le Wagon web developer bootcamp course using Ruby on Rails.
