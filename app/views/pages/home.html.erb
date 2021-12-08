@@ -6,7 +6,7 @@
     <h1 id="main-heading">Musical Emporium</h1>
     <p>Learn, play, rehearse, perform. Whatever your musical inclination, find your instrument here</p>
 
-     <%= form_tag instruments_path, method: :get do %>
+    <%= form_tag instruments_path, method: :get do %>
       <%= text_field_tag :query,
         params[:query],
         class: "form-control", id: "home-search",
@@ -15,8 +15,20 @@
       %>
       <%= submit_tag "Search", class: "btn btn-basic" %>
     <% end %>
+
+
+    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+      <div class="search-form-control form-group">
+        <input class="form-control string required" type="text" placeholder="Find an instrument" name="search[query]" id="search_query" />
+        <button name="button" type="submit" class="btn btn-basic">
+          <i class="fas fa-search"></i> Search
+        </button>
+      </div>
+    <% end %>
+
   </div>
 </div>
+
 
 
 
