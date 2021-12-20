@@ -1,20 +1,6 @@
-<%= form_tag instruments_path, method: :get do %>
-      <div class="search-form-control form-group">
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control string required", type: "text", id: "search_query",
-        placeholder: "Find an instrument"
 
 
-      %>
-
-      <%= submit_tag "Search", class: "btn btn-basic" %>
-      <i class="fas fa-search"></i>
-
-      </div>
-    <% end %>
-
-
+<!-- bootstrap version -->
 <div class="input-group mb-3">
   <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
   <div class="input-group-append">
@@ -22,3 +8,41 @@
   </div>
 </div>
 
+
+<!-- Le Wagon version  -->
+<%= simple_form_for :search, url: root_path, method: :get do |f| %>
+  <div class="search-form-control form-group">
+    <input class="form-control string required" type="text" placeholder="Find an instrument" name="search[query]" id="search_query" />
+    <button name="button" type="submit" class="btn btn-basic">
+      <i class="fas fa-search"></i> Search
+    </button>
+  </div>
+<% end %>
+
+<!-- CA amended version -->
+<%= form_tag instruments_path, method: :get do %>
+  <div class="search-form-control form-group">
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control", id: "search_query",
+      placeholder: "Find an instrument",
+      type: "text",
+      name: "search[query]"
+    %>
+    <%= submit_tag "Search", class: "btn btn-basic" %>
+       <i class="fas fa-search"></i>
+
+  </div>
+<% end %>
+
+
+<!-- CA original version -->
+<%= form_tag instruments_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control", id: "home-search",
+    placeholder: "Find an instrument"
+
+  %>
+  <%= submit_tag "Search", class: "btn btn-basic" %>
+<% end %>

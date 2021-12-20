@@ -7,28 +7,19 @@
     <p>Learn, play, rehearse, perform. Whatever your musical inclination, find your instrument here</p>
 
     <%= form_tag instruments_path, method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control", id: "home-search",
-        placeholder: "Find an instrument"
-
-      %>
-      <%= submit_tag "Search", class: "btn btn-basic" %>
-    <% end %>
-
-
-    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
       <div class="search-form-control form-group">
-        <input class="form-control string required" type="text" placeholder="Find an instrument" name="search[query]" id="search_query" />
-        <button name="button" type="submit" class="btn btn-basic">
-          <i class="fas fa-search"></i> Search
-        </button>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control", id: "search_query",
+          placeholder: "Find an instrument",
+          type: "text",
+          name: "search[query]"
+        %>
+        <%= submit_tag "Search", class: "btn btn-basic" %>
+           <i class="fas fa-search"></i>
+
       </div>
     <% end %>
 
   </div>
 </div>
-
-
-
-
