@@ -61,10 +61,10 @@ ActiveRecord::Schema.define(version: 2021_08_10_195825) do
     t.float "daily_rate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id"
     t.string "make"
     t.string "instrument_name"
     t.string "image_url"
+    t.bigint "user_id"
     t.text "description"
     t.string "category"
     t.index ["user_id"], name: "index_instruments_on_user_id"

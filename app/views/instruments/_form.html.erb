@@ -7,7 +7,6 @@
         <%= simple_form_for @instrument do |f| %>
 
           <%= f.input :instrument_type, placeholder:  "e.g. guitar, drums, piano" %>
-          <%= %>
           <%= f.input :category, :collection => %w[Keys Percussion Strings Woodwind] %>
           <%= f.input :make, placeholder:  "e.g Fender, Yamaha, Steinway " %>
           <%= f.input :instrument_name, label: "Model", placeholder: "e.g. stratocaster" %>

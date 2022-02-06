@@ -17,11 +17,10 @@
             <% else %>
               <%= cl_image_tag(instrument.photo.key) %>
             <% end %>
-            <div class="card-basic-infos">
-            <h4 ><%= link_to "#{instrument.make + ' ' + instrument.instrument_name}", instrument_path(instrument) %></h4>
-
-              <p><%= instrument.delivery_option %></p>
-              <p><%= number_to_currency(instrument.daily_rate, unit: "£") %></p>
+            <div class="card-basic__infos">
+              <h4 class="card-basic__caption" ><%= link_to "#{instrument.make + ' ' + instrument.instrument_name}", instrument_path(instrument) %></h4>
+              <p class="card-basic__text"><%= instrument.delivery_option %></p>
+              <p class="card-basic__text"><%= number_to_currency(instrument.daily_rate, unit: "£") %></p>
             </div>
           </div>
         </div>
