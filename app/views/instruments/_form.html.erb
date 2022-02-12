@@ -4,7 +4,7 @@
     <div class="col-12 col-lg-6">
       <div class="card-forms">
         <h2>Add an Instrument</h2>
-        <%= simple_form_for @instrument do |f| %>
+        <%= simple_form_for @instrument || Instrument.new do |f| %>
 
           <%= f.input :instrument_type, placeholder:  "e.g. guitar, drums, piano" %>
           <%= %>
